@@ -1,20 +1,24 @@
 #include <stdio.h>
 
 /**
- * main - entry point in printing
+ * main - entry point
  *
- * Return: always (0)
+ * Return: always return 0
  */
 
 int main(void)
 {
-	int n, a = 10;
+	int a;
 
-	for (n = 0; n < a; n++)
+	for (a = 0; a < 10; a++)
 	{
-		putchar(n + '0');
-		putchar(',');
-		putchar(' ');
+		putchar(a + '0');
+		if (a != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
+	putchar('\n');
 	return (0);
 }
