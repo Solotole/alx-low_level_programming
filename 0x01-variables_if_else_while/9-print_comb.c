@@ -8,9 +8,9 @@
 
 int main(void)
 {
-	int n, a = 9;
+	int n, a = 10;
 
-	for (n = 0; n <= a; n++)
+	for (n = 0; n < a; n++)
 	{
 		putchar(n + '0');
 		putchar(',');
