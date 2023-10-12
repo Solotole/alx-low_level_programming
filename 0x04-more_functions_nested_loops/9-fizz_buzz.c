@@ -16,6 +16,8 @@ int main(void)
 			printf("Fizz ");
 		else if (i % 5 == 0 && !(i % 15 == 0))
 			printf("Buzz ");
+		else if (i == 100)
+			printf("Buzz");
 		else if (i % 15 == 0)
 			printf("FizzBuzz ");
 		else
