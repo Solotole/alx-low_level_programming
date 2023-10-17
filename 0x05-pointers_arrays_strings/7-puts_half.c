@@ -16,14 +16,14 @@ void puts_half(char *str)
 	length_of_the_string = strlen(str);
 	n = (length_of_the_string - 1) / 2;
 	j = length_of_the_string / 2;
-	if (n % 2 == 0)
+	if (length_of_the_string % 2 == 0)
 	{
 		for (i = j; i < length_of_the_string; i++)
 			putchar(str[i]);
 	}
 	else
 	{
-		for (i = n + 1; i <= length_of_the_string - 1; i++)
+		for (i = n + 1; i < length_of_the_string; i++)
 			putchar(str[i]);
 	}
 	putchar('\n');
