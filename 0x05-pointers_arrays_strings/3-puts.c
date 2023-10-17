@@ -11,10 +11,5 @@
 
 void _puts(char *str)
 {
-	int i;
-	int j;
-
-	j = strlen(str);
-	for (i = 0; i <= j; i++)
-		puts(&str[i]);
+	puts(str);
 }
