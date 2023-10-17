@@ -11,23 +11,10 @@
 
 void print_rev(char *s)
 {
-	int i, j;
-	char *start, *end, temp;
+	int i, len;
 
-	j = strlen(s);
-	start = s;
-	end = s;
-
-	for (i = j - 1; i >= 0; i++)
-		end++;
-	for (i = 0; i < j / 2; i++)
-	{
-		temp = *end;
-		*end = *start;
-		*start = temp;
-
-		start++;
-		end--;
-	}
+	len = strlen(s);
+	for (i = len; i >= 0; i--)
+		putchar(s[i]);
 	putchar('\n');
 }
