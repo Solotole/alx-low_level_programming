@@ -11,25 +11,13 @@
 
 void reverse_array(int *a, int n)
 {
-	int i, j;
+	int i, j, z;
 
 	j = n - 1;
-	for (i = j; i >= 0; i--)
+	for (i = 0; i < j; i++)
 	{
-		if (i == j && i == j - 1)
-		{
-			putchar(a[i] + '0');
-			putchar(',');
-			putchar(' ');
-		}
-		if (i > 0 && !(i == j && i == j - 1))
-		{
-			putchar(a[i] + '0');
-			putchar(',');
-			putchar(' ');
-		}
-		if (i == 0)
-			putchar(a[i] + '0');
+		z = a[i];
+		a[i] = a[n];
+		a[n] = z;
 	}
-	putchar('\n');
 }
