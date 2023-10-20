@@ -25,4 +25,5 @@ char *rot13(char *n)
 		}
 	}
 	return (n);
+	putchar('\n');
 }
