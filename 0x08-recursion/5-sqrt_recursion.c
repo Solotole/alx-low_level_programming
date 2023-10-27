@@ -2,22 +2,32 @@
 #include <math.h>
 
 /**
- * _sqrt_recursion - function returning natural square root
- * @n: parameter to be square rooted
+ * sqrtnum - function returning natural square root
+ * @a: number
+ * @b: iteration variable
  *
  * Return: return a or -1 if not existing
+ */
+int sqrtnum(int a, int b)
+{
+	if (b * b == a)
+	{
+		return (b);
+	}
+	else if (b * b > a)
+	{
+		return (-1);
+	}
+	return (sqrtnum(a, b + 1));
+}
+/**
+ * _sqrt_recursion - function returning natural square root of a number
+ * @n: number to be square rooted
+ *
+ * Return: return natural square root
  */
 
 int _sqrt_recursion(int n)
 {
-	int z, a;
-
-	z = sqrt(n);
-	if (n < 0)
-		return (-1); /*signifying error*/
-	if (n != z * _sqrt_recursion(n)) /*if z is not of type integer*/
-		return (-1); /*signifying error*/
-	if (n == z * _sqrt_recursion(n)) /*if z is an integer*/
-		a = z; /*assigning z to a*/
-	return (a);
+	return (sqrtnum(n, 0));
 }
