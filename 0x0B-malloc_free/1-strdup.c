@@ -25,7 +25,12 @@ char *_strdup(char *str)
 		int i;
 
 		for (i = 0; i <= len; i++)
-			ptr[i] = str[i];
+		{
+			if (i < len)
+				ptr[i] = str[i];
+			if (i == len)
+				ptr[i] = '\0';
+		}
 	}
 	plen = strlen(ptr);
 	if (plen != len)
