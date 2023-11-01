@@ -1,7 +1,4 @@
 #include "main.h"
-#include <string.h>
-#include <stdlib.h>
-#include <stddef.h>
 
 /**
  * _strdup - functio that returns a duplicate pointer
@@ -12,29 +9,18 @@
 
 char *_strdup(char *str)
 {
-	int len, plen;
+	int len, i;
 	char *ptr;
 
-	len = strlen(str);
-	ptr = (char *)malloc(sizeof(char) * len);
 	if (str == NULL)
 		return (NULL);
+	len = strlen(str);
 
-	if (!(str == NULL))
-	{
-		int i;
+	ptr = (char *)malloc(sizeof(char) * len + 1);
 
-		for (i = 0; i <= len; i++)
-		{
-			if (i < len)
-				ptr[i] = str[i];
-			if (i == len)
-				ptr[i] = '\0';
-		}
-	}
-	plen = strlen(ptr);
-	if (plen != len)
+	if (ptr == NULL)
 		return (NULL);
+	for (i = 0; i <= len; i++)
+		ptr[i] = str[i];
 	return (ptr);
-	free(ptr);
 }
