@@ -31,7 +31,7 @@ unsigned int binary_to_uint(const char *b)
 		count++;
 		i++;
 	}
-	if (b == NULL)
+	if (!b)
 		return (0);
 	j = 0;
 	while (j < count)
