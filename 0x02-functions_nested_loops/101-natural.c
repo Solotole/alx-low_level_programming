@@ -6,20 +6,12 @@
  */
 int main(void)
 {
-	int i, num, sum = 0;
+	int i, sum;
 
 	for (i = 0; i < 1024; i++)
 	{
-		if (i % 3 == 0)
-		{
-			num = i;
-			sum += num;
-		}
-		if (i % 5 == 0)
-		{
-			num = i;
-			sum += num;
-		}
+		if ((i % 3 == 0) || (i % 5 == 0))
+			sum = 0 + i;
 	}
 	printf("%d\n", sum);
 	return (0);
