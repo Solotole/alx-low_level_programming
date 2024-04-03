@@ -11,6 +11,10 @@ clean:
 	$(COMMAND)*~ $(NAME)
 oclean:
 	$(COMMAND) $(OBJ)
-re: oclean all
+re:
+	$(COMMAND) $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
-fclean: clean oclean
+fclean:
+	$(COMMAND)*~ $(NAME)
+	$(COMMAND) $(OBJ)
