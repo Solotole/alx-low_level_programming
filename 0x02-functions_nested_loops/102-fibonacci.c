@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * main - main entry of the program
- *
+ * printing first 50 including 1 and 2
  * Return: return 0 on success
  */
 int main(void)
@@ -17,7 +17,7 @@ int main(void)
 		result = a + b;
 		if (i != 47)
 			printf("%d, ", result);
-		else if (i == 47)
+		else
 			printf("%d\n", result);
 		a = b;
 		b = result;
