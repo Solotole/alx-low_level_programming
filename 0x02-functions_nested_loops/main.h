@@ -19,5 +19,6 @@ void print_times_table(int n);
 void times_table(void);
 void print45(int a, int b);
 void print_times_table(int n);
+int main(void);
 
 #endif
