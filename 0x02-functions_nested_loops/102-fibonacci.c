@@ -6,19 +6,19 @@
  */
 int main(void)
 {
-	int i = 0, a, b, result;
+	unsigned long i = 0, a, b, result;
 
 	a = 1;
 	b = 2;
-	printf("%d, ", a);
-	printf("%d, ", b);
+	printf("%lu, ", a);
+	printf("%lu, ", b);
 	while (i < 48)
 	{
 		result = a + b;
 		if (i != 47)
-			printf("%d, ", result);
+			printf("%lu, ", result);
 		else
-			printf("%d\n", result);
+			printf("%lu\n", result);
 		a = b;
 		b = result;
 		i++;
