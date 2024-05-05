@@ -14,11 +14,10 @@ int main(void)
 	printf("%d, ", b);
 	while (i < 48)
 	{
-		j++;
 		result = a + b;
-		if (i != 98)
+		if (i != 47)
 			printf("%d, ", result);
-		else if (i == 98)
+		else if (i == 47)
 			printf("%d\n", result);
 		a = b;
 		b = result;
