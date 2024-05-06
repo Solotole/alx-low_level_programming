@@ -30,6 +30,8 @@ char *cap_string(char *str)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
 	{
+		if (i == 0 && (str[i] >= 'a' && str[i] <= 'z'))
+			str[i] = uppercase(str[i]);
 		for  (j = 0; separators[j] != '\0'; j++)
 		{
 			if (str[i] == separators[j])
