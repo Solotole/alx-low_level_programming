@@ -14,4 +14,6 @@ int sqrtnum(int a, int b);
 int primenum(int x, int y);
 int _putchar(char c);
 int is_palindrome(char *s);
+int wildcmp(char *s1, char *s2);
+
 #endif
