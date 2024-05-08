@@ -25,8 +25,13 @@ int is_palindrome(char *s)
 {
 	int i, value, length = 0;
 
+	if (s[0] == '\0')
+		return (1);
 	for (i = 0; s[i] != '\0'; i++)
 		length++;
-	value = palindrome_recursion(s, 0, length - 1);
+	if (length == 1)
+		return (1);
+	if (length > 1)
+		value = palindrome_recursion(s, 0, length - 1);
 	return (value);
 }
