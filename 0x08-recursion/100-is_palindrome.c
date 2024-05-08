@@ -11,9 +11,21 @@ int palindrome_recursion(char *str, int start, int end)
 {
 	if (start >= end)
 		return (1);
-	if (str[start] != str[end])
+	if (str[start] != str[end - 1])
 		return (0);
 	return (palindrome_recursion(str, start + 1, end - 1));
+}
+/**
+ * length - strlen replica though in recursion
+ * @str: string to find for length
+ *
+ * Return: return the length of a string
+ */
+int length(char *str)
+{
+	if (*str == '\0')
+		return (0);
+	return (1 + length(str + 1));
 }
 /**
  * is_palindrome - function to confirm for palindrome quality
@@ -23,15 +35,10 @@ int palindrome_recursion(char *str, int start, int end)
  */
 int is_palindrome(char *s)
 {
-	int i, value, length = 0;
+	int value;
 
 	if (s[0] == '\0')
 		return (1);
-	for (i = 0; s[i] != '\0'; i++)
-		length++;
-	if (length == 1)
-		return (1);
-	if (length > 1)
-		value = palindrome_recursion(s, 0, length - 1);
+	value = palindrome_recursion(s, 0, length(s));
 	return (value);
 }
