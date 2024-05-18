@@ -4,6 +4,8 @@
  * @name: name of the created dog
  * @age: age of the newly created dog
  * @owner: owner of the newly created dog
+ *
+ * Return: return pointer to the newly created dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
