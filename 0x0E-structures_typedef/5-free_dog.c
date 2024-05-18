@@ -10,7 +10,7 @@ void free_dog(dog_t *d)
 	dog_t *ptr = d;
 
 	if (ptr == NULL)
-		retun;
+		return;
 	free(ptr->name);
 	free(ptr->owner);
 	free(ptr);
