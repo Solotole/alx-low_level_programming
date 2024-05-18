@@ -17,7 +17,8 @@ void add_nums(char *final_prod, char *next_prod, int next_len);
 int find_len(char *str)
 {
 	int len = 0;
-	while (*str++))
+
+	while (*str++)
 		len++;
 	return (len);
 }
@@ -35,7 +36,7 @@ char *create_xarray(int size)
 {
 	char *array;
 	int index;
-	
+
 	array = malloc(sizeof(char) * size);
 	if (array == NULL)
 		exit(98);
@@ -69,7 +70,8 @@ char *iterate_zeroes(char *str)
 int get_digit(char c)
 {
 	int digit = c - '0';
-	
+
+
 	if (digit < 0 || digit > 9)
 	{
 		printf("Error\n");
@@ -91,7 +93,7 @@ int get_digit(char c)
 void get_prod(char *prod, char *mult, int digit, int zeroes)
 {
 	int mult_len, num, tens = 0;
-	
+
 	mult_len = find_len(mult) - 1;
 	mult += mult_len;
 	while (*prod)
@@ -143,7 +145,6 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
 		next_prod--;
 		next_len--;
 	}
-	
 	for (; next_len >= 0 && *next_prod != 'x'; next_len--)
 	{
 		num = (*next_prod - '0');
@@ -169,7 +170,7 @@ int main(int argc, char *argv[])
 {
 	char *final_prod, *next_prod;
 	int size, index, digit, zeroes = 0;
-	
+
 	if (argc != 3)
 	{
 		printf("Error\n");
