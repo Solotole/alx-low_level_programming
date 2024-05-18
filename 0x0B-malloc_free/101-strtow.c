@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 /**
  * word_len - Locates the index marking the end of the
  * first word contained within a string.
