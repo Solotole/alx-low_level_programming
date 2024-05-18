@@ -14,11 +14,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	struct dog *techie;
 	char *i, *j;
 	int x, y, z;
-	
+
 	techie = malloc(sizeof(struct dog));
 	if (techie == NULL)
 		return (NULL);
-	
+
 	for (x = 0; *(name + x) != '\0'; x++)
 		;
 	for (y = 0; *(owner + y) != '\0'; y++)
@@ -40,10 +40,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		*(i + z) = *(name + z);
 	for (z = 0; z <= y; z++)
 		*(j + z) = *(owner + z);
-	
+
 	techie->name = i;
 	techie->age = age;
 	techie->owner = j;
-	
 	return (techie);
 }
