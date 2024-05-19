@@ -33,5 +33,5 @@ int main(int ac, char *argv[])
 	}
 	result = operation(a, b);
 	printf("%d\n", result);
-	exit(0);
+	return (0);
 }
