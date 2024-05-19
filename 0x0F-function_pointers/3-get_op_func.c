@@ -5,6 +5,7 @@
  * @s: string conataining the operator ie.argv[2]
  *
  * Return: return pointer to the operating function
+ * upon argv[2] accessing or NULL otherwise
  */
 int (*get_op_func(char *s))(int, int)
 {
