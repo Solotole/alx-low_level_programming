@@ -25,7 +25,7 @@ int recursive_binary_search(int *array, size_t start, size_t end, int value)
 	middle = start + (end - start) / 2;
 	if (array[middle] == value)
 	{
-		if (middle == start || array[middle - 1] < value)
+		if (array[middle - 1] < value)
 			return (middle);
 		return (recursive_binary_search(array, start, middle, value));
 	}
