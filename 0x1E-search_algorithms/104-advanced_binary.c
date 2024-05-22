@@ -1,5 +1,26 @@
 #include "search_algos.h"
 /**
+ * reverse_index - function responsible for finding index in the reverse
+ *
+ * @array: array in question
+ * @top: middle - 1 of the array
+ * @value: value to be searched for
+ *
+ * Return: return -1 on failure and the reverse index on success
+ */
+int reverse_index(int *array, size_t top, int value)
+{
+	int i = (int)top;
+
+	while (i >= 0)
+	{
+		if (array[i] == value)
+			return (i);
+		i--;
+	}
+	return (-1);
+}
+/**
  * recursive_binary_search - recursive binary searching for a value
  * @array: array to search for the value
  * @start: starting index of the array searching
@@ -11,6 +32,7 @@
 size_t recursive_binary_search(int *array, size_t start, size_t end, int value)
 {
 	size_t middle, i;
+	int reverse;
 
 	if (start > end)
 		return (-1);
@@ -23,12 +45,14 @@ size_t recursive_binary_search(int *array, size_t start, size_t end, int value)
 	}
 	printf("\n");
 	middle = start + (end - start) / 2;
-	if ((array[middle] == value) && (array[middle - 1] != value))
-		return (middle);
-	if ((array[middle] == value) && (array[middle - 1] == value))
-		return (recursive_binary_search(array, start, middle, value));
-	if ((array[middle] == value) && (array[middle + 1] == value))
-		return (recursive_binary_search(array, middle, end, value));
+	if (array[middle] == value)
+	{
+		reverse = reverse_index(array, middle - 1, value);
+		if (reverse >= 0)
+			return (recursive_binary_search(array, start, middle, value));
+		else if (reverse == -1)
+			return (middle);
+	}
 	if (value > array[middle])
 		return (recursive_binary_search(array, middle + 1, end, value));
 	if (value < array[middle])
